@@ -1,0 +1,119 @@
+.dashboard-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.username {
+  color: #5a3fff;
+  font-weight: bold;
+}
+
+h3 {
+  margin-top: 10px;
+  color: #444;
+}
+
+.search-section {
+  margin: 15px 0;
+}
+
+.search-section input {
+  width: 60%;
+  padding: 10px;
+  border: 2px solid #5a3fff;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+.song-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.song-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px; /* space between elements */
+  background: #f7f7f7;
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.song-item:hover {
+  transform: scale(1.02);
+  background: #f0f0ff;
+}
+
+.song-name {
+  font-weight: 500;
+  flex: 1;
+  text-align: left;
+}
+
+audio {
+  width: 250px;
+}
+
+.menu-container {
+  position: relative;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 28px;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 10;
+  min-width: 100px;
+}
+
+.dropdown-menu button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 6px 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.dropdown-menu button:hover {
+  background: #f2f2f2;
+}
+
+.delete-btn {
+  color: #e74c3c;
+  font-weight: 500;
+}
+
+.message {
+  font-size: 15px;
+  margin-top: 10px;
+  color: #1e88e5;
+}
+
+.loading,
+.error,
+.empty {
+  font-size: 16px;
+  color: #777;
+}
