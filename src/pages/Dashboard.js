@@ -12,10 +12,8 @@ function Dashboard() {
     const userData = JSON.parse(localStorage.getItem("userData"));
     const userId = userData?.userId;
 
-    useEffect(() => {
-        if (!userId) return;
-        fetchSongs();
-    }, [userId]);
+ useEffect(() => {
+    if (!userId) return;
 
     const fetchSongs = async () => {
         try {
@@ -29,6 +27,10 @@ function Dashboard() {
             setLoading(false);
         }
     };
+
+    fetchSongs();
+}, [userId]); // ✅ Now no ESLint warning
+
 
     // ✅ Delete song API call
     const handleDelete = async (songId) => {
@@ -53,6 +55,7 @@ function Dashboard() {
         }
     };
 
+    
     // ✅ Filter songs by search input
     const filteredSongs = songs.filter((song) =>
         song.fileName.toLowerCase().includes(search.toLowerCase())
