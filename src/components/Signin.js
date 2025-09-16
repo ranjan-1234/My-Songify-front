@@ -13,7 +13,7 @@ function Signin({ onLogin }) {
     setError("");
 
     try {
-      const response = await fetch("https://songify-ranjan.onrender.com/api/AccountApi/Login", {
+      const response = await fetch("https://songify-app-kms7.onrender.com/api/AccountApi/Login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
