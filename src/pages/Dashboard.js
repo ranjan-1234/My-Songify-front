@@ -17,7 +17,9 @@ function Dashboard() {
 
     const fetchSongs = async () => {
         try {
-            const response = await fetch(`https://localhost:7224/api/SongApi/Playlist/${userId}`);
+          //  const response = await fetch(`https://songify-app-kms7.onrender.com/api/SongApi/Playlist/${userId}`);
+          const API_BASE = process.env.REACT_APP_API_BASE;
+          const response = await fetch(`${API_BASE}/api/SongApi/Playlist/${userId}`);
             if (!response.ok) throw new Error("Failed to fetch songs");
             const data = await response.json();
             setSongs(data);
@@ -35,7 +37,7 @@ function Dashboard() {
     // ✅ Delete song API call
     const handleDelete = async (songId) => {
         try {
-            const response = await fetch(`https://localhost:7224/api/SongApi/Delete/${songId}`, {
+            const response = await fetch(`https://songify-app-kms7.onrender.com/api/SongApi/Delete/${songId}`, {
                 method: "DELETE",
             });
 

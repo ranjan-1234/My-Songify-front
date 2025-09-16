@@ -13,7 +13,7 @@ function Signin({ onLogin }) {
     setError("");
 
     try {
-      const response = await fetch("https://localhost:7224/api/AccountApi/Login", {
+      const response = await fetch("https://songify-ranjan.onrender.com/api/AccountApi/Login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -32,8 +32,8 @@ function Signin({ onLogin }) {
     } catch (err) {
       setError("❌ Network error: " + err.message);
     }
-  };
 
+  };
   return (
     <div className="form-container">
       <h2>Sign In</h2>
@@ -45,7 +45,6 @@ function Signin({ onLogin }) {
           onChange={(e) => setEmail(e.target.value)}
           required
         />
-
         <div className="password-container">
           <input
             type={showPassword ? "text" : "password"}

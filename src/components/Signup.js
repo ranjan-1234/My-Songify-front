@@ -14,7 +14,7 @@ function Signup() {
     setMessage("");
 
     try {
-      const response = await fetch("https://localhost:7224/api/AccountApi/Register", {
+      const response = await fetch("https://songify-app-kms7.onrender.com/api/AccountApi/Register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -33,6 +33,7 @@ function Signup() {
     } catch (error) {
       setMessage("❌ Network error: " + error.message);
     }
+
   };
 
   return (

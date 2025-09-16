@@ -9,7 +9,9 @@ function TopSingers() {
   useEffect(() => {
     const fetchTopSingers = async () => {
       try {
-        const response = await fetch("https://localhost:7224/api/TopSingers");
+       //  const response = await fetch("https://localhost:7224/api/TopSingers");
+         const API_BASE = process.env.REACT_APP_API_BASE;
+         const response = await fetch(`${API_BASE}/api/TopSingers`);
         if (!response.ok) throw new Error("Failed to fetch top singers");
         const data = await response.json();
         setSingers(data);
@@ -19,7 +21,6 @@ function TopSingers() {
         setLoading(false);
       }
     };
-
     fetchTopSingers();
   }, []);
 

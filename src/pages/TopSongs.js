@@ -8,7 +8,9 @@ function TopSongs() {
   useEffect(() => {
     const fetchTopSongs = async () => {
       try {
-        const response = await fetch("https://localhost:7224/api/TopSongs");
+        // const response = await fetch("https://localhost:7224/api/TopSongs");
+         const API_BASE = process.env.REACT_APP_API_BASE;
+         const response = await fetch(`${API_BASE}/api/TopSongs`);
         if (!response.ok) throw new Error("Failed to fetch songs");
         const data = await response.json();
         setSongs(data);

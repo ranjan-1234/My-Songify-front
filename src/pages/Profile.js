@@ -3,7 +3,6 @@ import "./Profile.css";
 
 function Profile() {
   const userData = JSON.parse(localStorage.getItem("userData"));
-
   return (
     <div className="profile-container">
       <h2>User Profile</h2>
@@ -12,5 +11,4 @@ function Profile() {
     </div>
   );
 }
-
 export default Profile;
